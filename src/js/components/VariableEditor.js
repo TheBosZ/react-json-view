@@ -296,7 +296,13 @@ class VariableEditor extends React.PureComponent {
                     minRows={2}
                     {...Theme(theme, 'edit-input')}
                 />
-                <div {...Theme(theme, 'edit-icon-container')}>
+                <div
+                    style={{
+                        verticalAlign: 'top',
+                        display: 'inline-block'
+                    }}
+                >{this.showDetected()}</div>
+                <div {...Theme(theme, 'edit-icon-container')}> 
                     <Remove
                         class="edit-cancel"
                         {...Theme(theme, 'cancel-icon')}
@@ -311,7 +317,7 @@ class VariableEditor extends React.PureComponent {
                             this.submitEdit();
                         }}
                     />
-                    <div>{this.showDetected()}</div>
+                    {"Convert to string"}
                 </div>
             </div>
         );
